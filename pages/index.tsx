@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       </div>
       <div className='content'>
         <p className='message'>
-          Our brand new website will be launching in at the end of January.
+          My brand new website will be launching at the end of January.
         </p>
       </div>
     </div>
