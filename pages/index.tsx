@@ -2,7 +2,7 @@
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Avatar, Box, Container, Link, Popover } from '@mui/material';
+import { Avatar, Box, Link, Popover } from '@mui/material';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
           rel='stylesheet'
         />
       </Head>
-      <Container className='content' maxWidth={false}>
+      <div className='content'>
         <h1 className={'heading'}>Sadia Afrin</h1>
         <h2>
           <span>I code for </span>
@@ -131,8 +131,10 @@ const Home: NextPage = () => {
                           component='img'
                           src={selectedTab.description?.imageUrl}
                           sx={{
-                            maxHeight: '100vh',
-                            maxWidth: '80vh',
+                            objectFit: 'cover',
+                            maxHeight: '80vh',
+                            maxWidth: '80vw',
+                            verticalAlign: 'middle',
                           }}
                         />
                       </Popover>
@@ -164,7 +166,7 @@ const Home: NextPage = () => {
             <EmailIcon />
           </a>
         </Box>
-      </Container>
+      </div>
     </>
   );
 };
